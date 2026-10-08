@@ -18,7 +18,6 @@ add_action( 'after_setup_theme', function () {
 	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script' ) );
 	add_theme_support( 'responsive-embeds' );
 	add_theme_support( 'automatic-feed-links' );
-	add_theme_support( 'custom-logo', array( 'height' => 120, 'width' => 280, 'flex-width' => true, 'flex-height' => true ) );
 	register_nav_menus( array(
 		'primary' => 'Hauptmenü',
 		'footer'  => 'Footer (rechtliche Links)',
@@ -42,13 +41,10 @@ add_action( 'wp_head', function () {
 	echo '<meta name="theme-color" content="#06324f">' . "\n";
 }, 2 );
 
-/** Logo: Custom Logo aus dem Customizer, sonst das mitgelieferte Logo. */
+/** Logo: immer das mitgelieferte, freigestellte PNG (ein evtl. alt gesetztes Custom Logo wird bewusst ignoriert). */
 function cdn_logo( $class = 'brand__logo' ) {
-	if ( has_custom_logo() ) {
-		return get_custom_logo();
-	}
 	return sprintf(
-		'<a href="%s" class="custom-logo-link" rel="home" aria-label="%s – Startseite"><img class="%s" src="%s" width="150" height="64" alt="%s"></a>',
+		'<a href="%s" class="brand__link" rel="home" aria-label="%s – Startseite"><img class="%s" src="%s" width="420" height="180" alt="%s" fetchpriority="high" decoding="async"></a>',
 		esc_url( home_url( '/' ) ),
 		esc_attr( get_bloginfo( 'name' ) ),
 		esc_attr( $class ),
@@ -300,3 +296,40 @@ function cdn_contact_form() {
 	</form>
 	<?php
 }
+
+/* ---------------------------------------------------- Seiten-Templates */
+
+// Seiten mit bekanntem Slug nutzen automatisch das passende Template,
+// auch wenn im Editor noch keines gewählt wurde.
+add_filter( 'template_include', function ( $template ) {
+	if ( ! is_page() || get_page_template_slug() ) {
+		return $template;
+	}
+	$map = array(
+		'services'   => 'template-leistungen.php',
+		'leistungen' => 'template-leistungen.php',
+		'kontakt'    => 'template-kontakt.php',
+		'contact'    => 'template-kontakt.php',
+	);
+	$slug = get_post_field( 'post_name', get_queried_object_id() );
+	if ( isset( $map[ $slug ] ) ) {
+		$file = locate_template( $map[ $slug ] );
+		if ( $file ) {
+			return $file;
+		}
+	}
+	return $template;
+} );
+
+/* ------------------------------------------------------- Performance */
+
+// Neue Uploads automatisch als WebP erzeugen (deutlich kleiner als PNG/JPEG).
+add_filter( 'image_editor_output_format', function ( $formats ) {
+	$formats['image/png']  = 'image/webp';
+	$formats['image/jpeg'] = 'image/webp';
+	return $formats;
+} );
+add_filter( 'wp_editor_set_quality', fn() => 80 );
+add_filter( 'big_image_size_threshold', fn() => 2000 );
+
+// Browser-Caching-Hinweis für statische Theme-Dateien (falls der Server keinen setzt) ist Sache der .htaccess – siehe README.

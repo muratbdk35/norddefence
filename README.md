@@ -34,3 +34,22 @@ Ordner: `cyber-defence-nord/`
 - Die Telefonnummer `+49 44405254` wurde unverändert von der alten Seite übernommen – bitte prüfen.
 - Bilder in der Mediathek: sprechende Dateinamen und Alt-Texte vergeben; Standardseiten-Inhalte bleiben unverändert.
 - Eine Content-Security-Policy ist bewusst nicht gesetzt (hängt von den aktiven Plugins ab); HSTS/CSP ggf. zusätzlich am Server.
+
+## Bilder & Ladezeit
+Die größten Bilder der alten Seite sind 1–2,3 MB große PNGs (z. B. `CDN-Background-web-site.png`, `ChatGPT-Image-…png`, `image.png`).
+- Das Theme erzeugt **neue** Uploads automatisch als WebP (Qualität 80) und skaliert Riesenbilder auf max. 2000 px.
+- Bestehende Bilder: Plugin **WP-Optimize** (ist installiert) → Tab „Images“ → komprimieren; alternativ „Regenerate Thumbnails“ + „Converter for Media“ (WebP).
+  Besser: Originale vor dem Upload mit squoosh.app als WebP/JPEG (Breite max. 1600 px, < 200 KB) speichern.
+- WP-Optimize → „Caching“ aktivieren (Seiten-Cache, GZIP, Browser-Cache), dazu „Minify“ für CSS/JS.
+- Das Logo ist ein 15-KB-PNG und wird mit hoher Priorität geladen; alle Bilder im Seitentext laden per Lazy-Loading.
+- Optional in der `.htaccess` (vor `# BEGIN WordPress`) Browser-Caching setzen:
+```
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+```

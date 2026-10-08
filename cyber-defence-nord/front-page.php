@@ -23,7 +23,7 @@
 	</div>
 </section>
 
-<section class="section" id="leistungen">
+<section class="section section--services" id="leistungen">
 	<div class="container">
 		<div class="section__head reveal">
 			<p class="eyebrow">Leistungen</p>
@@ -60,7 +60,7 @@
 	</div>
 </section>
 
-<section class="section">
+<section class="section section--dark">
 	<div class="container">
 		<div class="section__head reveal">
 			<p class="eyebrow">So arbeiten wir</p>
