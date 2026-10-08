@@ -55,3 +55,10 @@ Tema bunların çoğunu çözüyor; kalanlar WordPress panelinden yapılmalı.
 - Hero altında Hamburg silueti (inline SVG, `inc/skyline.php`; Michel, Nikolai, Rathaus, Elbphilharmonie, vinçler – stilize). İstenirse gerçek fotoğrafla değiştirilebilir.
 - Hero'daki "24/7" iddiası kaldırıldı; hizmet metinlerindeki iddialar hâlâ doğrulanmalı.
 - Anahtar yenilenmeli (sohbette iki kez düz metin paylaşıldı).
+
+## Englisch (v2.1)
+- Plugin yok. Tema `inc/lang.php`: `/en/`, `/en/services/`, `/en/contact/` sanal adresleri (rewrite kuralı, tema şablonlarını İngilizce çiziyor). Header'da DE/EN anahtarı, hreflang, `lang="en-US"`, İngilizce başlık/açıklama.
+- Metinler: `cdn_t('de','en')` / `cdn_e()`; hizmetlerin İngilizcesi `inc/content.php` → `cdn_services_en()`.
+- Über uns, Impressum, Datenschutz Almanca kalıyor (İngilizce menüde "(DE)" etiketli).
+- Tema ilk etkinleşince kalıcı bağlantılar kendiliğinden yenilenir; `/en/` 404 verirse Ayarlar → Kalıcı bağlantılar → Kaydet.
+- İngilizce metinler benim çevirim; yayından önce bir ana dili konuşan okumalı.
