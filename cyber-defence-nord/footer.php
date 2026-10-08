@@ -4,7 +4,7 @@
 	<div class="container footer__grid">
 		<div class="footer__brand">
 			<a class="footer__logo" href="<?php echo esc_url( cdn_url_home() ); ?>" aria-label="Cyber Defence Nord">
-				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/logo.png' ); ?>" width="150" height="64" alt="Cyber Defence Nord" loading="lazy">
+				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/logo-light.png' ); ?>" width="150" height="64" alt="Cyber Defence Nord" loading="lazy">
 			</a>
 			<p><?php cdn_e( 'IT-Sicherheit aus Hamburg – für Unternehmen, Behörden und kritische Infrastrukturen in Norddeutschland.', 'IT security from Hamburg – for companies, public bodies and critical infrastructure in northern Germany.' ); ?></p>
 		</div>
