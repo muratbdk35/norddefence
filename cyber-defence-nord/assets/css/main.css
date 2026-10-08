@@ -78,8 +78,10 @@ p{margin:0 0 1em}
 .index__head{display:grid;grid-template-columns:repeat(12,1fr);gap:0 24px;margin-bottom:clamp(32px,5vw,64px)}
 .index__head .label{grid-column:1/4}.index__head h2{grid-column:5/13;margin:0}
 .index__list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-d)}
-.index__row{display:grid;grid-template-columns:repeat(12,1fr);gap:0 24px;align-items:baseline;padding:28px 0;border-bottom:1px solid var(--line-d);text-decoration:none;color:inherit;transition:background .25s,padding .25s}
-.index__row:hover{background:rgba(255,255,255,.04);padding-inline:16px;color:#fff}
+.index__row{display:grid;grid-template-columns:repeat(12,1fr);gap:0 24px;align-items:baseline;padding:28px 0;border-bottom:1px solid var(--line-d);text-decoration:none;color:inherit;}
+.index__row{position:relative}
+.index__row::before{content:"";position:absolute;inset:0 -16px;background:rgba(255,255,255,.05);opacity:0;transition:opacity .25s;pointer-events:none}
+.index__row:hover{color:#fff}.index__row:hover::before{opacity:1}
 .index__n{grid-column:1/2;font-family:var(--serif);font-size:1.1rem;color:#f0a08f}
 .index__title{grid-column:2/6;font-family:var(--serif);font-size:clamp(1.4rem,2.4vw,2rem);line-height:1.15;color:#fff}
 .index__text{grid-column:6/12;font-size:.98rem;color:rgba(255,255,255,.7)}
