@@ -1,0 +1,5 @@
+/* Editor-Ansicht: ähnelt dem Frontend */
+body,.editor-styles-wrapper{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:17px;line-height:1.65;color:#0b1c2c;background:#f3efe6}
+.editor-styles-wrapper h1,.editor-styles-wrapper h2,.editor-styles-wrapper h3,.editor-styles-wrapper h4{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-weight:400;line-height:1.1;color:#0b1c2c}
+.editor-styles-wrapper a{color:#0a2a43}
+.editor-styles-wrapper .wp-block{max-width:820px}
