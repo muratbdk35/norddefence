@@ -48,3 +48,10 @@ Tema bunların çoğunu çözüyor; kalanlar WordPress panelinden yapılmalı.
 
 ## Geri bildirim geçmişi (tema)
 - v1.0 → v1.1: logo küçük/beyaz kenarlıydı (Custom Logo yüzünden) → paketli şeffaf PNG, büyütüldü; hizmetler bölümü fazla beyaz → mavi zemin ve koyu kontrast; Services/Datenschutz sayfaları bozuktu → otomatik şablon + içindekiler menülü geniş düzen; görseller yavaş → WebP, lazy-load, README önerileri.
+
+## v2 – editoryal yeniden tasarım (21st ilhamıyla)
+- 21st MCP HTTP üzerinden doğrudan çağrıldı (araçlar oturuma yüklenmedi); "Editorial Hero" (sol küçük slogan, sağ büyük serif başlık, altta tam genişlik görsel) düzeni referans alındı. Kod alınmadı, düzen sıfırdan yazıldı.
+- Kart ızgarası/ikon/gradyan kaldırıldı: kâğıt rengi zemin, serif başlıklar (sistem fontu), tek vurgu rengi, numaralı hizmet indeksi, "Haltung" bölümü, çizgili süreç bölümü.
+- Hero altında Hamburg silueti (inline SVG, `inc/skyline.php`; Michel, Nikolai, Rathaus, Elbphilharmonie, vinçler – stilize). İstenirse gerçek fotoğrafla değiştirilebilir.
+- Hero'daki "24/7" iddiası kaldırıldı; hizmet metinlerindeki iddialar hâlâ doğrulanmalı.
+- Anahtar yenilenmeli (sohbette iki kez düz metin paylaşıldı).
