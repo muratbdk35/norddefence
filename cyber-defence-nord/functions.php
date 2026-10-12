@@ -49,10 +49,10 @@ function cdn_logo( $class = 'brand__logo' ) {
 	return sprintf(
 		'<a href="%s" class="brand__link" rel="home" aria-label="%s"><img class="%s" src="%s" width="420" height="180" alt="%s" fetchpriority="high" decoding="async"></a>',
 		esc_url( cdn_url_home() ),
-		esc_attr( get_bloginfo( 'name' ) ),
+		esc_attr( 'Cyber Defence Nord' ),
 		esc_attr( $class ),
 		esc_url( get_template_directory_uri() . '/assets/img/logo.png' ),
-		esc_attr( get_bloginfo( 'name' ) )
+		esc_attr( 'Cyber Defence Nord' )
 	);
 }
 
@@ -131,7 +131,7 @@ add_action( 'wp_head', function () {
 	}
 	printf( '<meta property="og:title" content="%s">' . "\n", esc_attr( wp_get_document_title() ) );
 	echo '<meta property="og:type" content="website">' . "\n";
-	printf( '<meta property="og:site_name" content="%s">' . "\n", esc_attr( get_bloginfo( 'name' ) ) );
+	printf( '<meta property="og:site_name" content="%s">' . "\n", esc_attr( 'Cyber Defence Nord' ) );
 	printf( '<meta property="og:image" content="%s">' . "\n", esc_url( get_template_directory_uri() . '/assets/img/icon-512.png' ) );
 	echo '<meta property="og:locale" content="' . ( 'en' === cdn_lang() ? 'en_US' : 'de_DE' ) . '">' . "\n";
 
