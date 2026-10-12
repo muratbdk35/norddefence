@@ -109,10 +109,10 @@ add_filter( 'document_title_separator', fn() => '–' );
 
 function cdn_meta_description() {
 	if ( 'en' === cdn_lang() ) {
-		return 'Cyber Defence Nord: IT security from Hamburg. Penetration testing, SIEM & SOC integration, threat intelligence, ISMS according to ISO 27001 and audits for companies, public bodies and critical infrastructure in northern Germany.';
+		return 'Cyber Defence Nord: IT security from Hamburg. Penetration testing, SIEM & SOC integration, threat intelligence, ISMS according to ISO 27001, NIS2 consulting and audits for companies, public bodies and critical infrastructure in northern Germany.';
 	}
 	if ( is_front_page() ) {
-		return 'Cyber Defence Nord: IT-Sicherheit aus Hamburg. Penetrationstests, SIEM- & SOC-Integration, Threat Intelligence, ISMS nach ISO 27001 und Audits für Unternehmen, Behörden und kritische Infrastrukturen in Norddeutschland.';
+		return 'Cyber Defence Nord: IT-Sicherheit aus Hamburg. Penetrationstests, SIEM- & SOC-Integration, Threat Intelligence, ISMS nach ISO 27001, NIS2-Beratung und Audits für Unternehmen, Behörden und kritische Infrastrukturen in Norddeutschland.';
 	}
 	if ( is_singular() ) {
 		$post = get_post();
@@ -278,8 +278,8 @@ function cdn_contact_form() {
 		'error'   => array( 'err', cdn_t( 'Die Nachricht konnte leider nicht gesendet werden. Bitte schreiben Sie uns direkt per E-Mail.', 'Your message could not be sent. Please email us directly.' ) ),
 	);
 	$topics = 'en' === cdn_lang()
-		? array( 'General enquiry', 'Penetration test', 'SIEM / SOC', 'Threat intelligence', 'ISMS / ISO 27001', 'Audit', 'Cloud & IT support' )
-		: array( 'Allgemeine Anfrage', 'Penetrationstest', 'SIEM / SOC', 'Threat Intelligence', 'ISMS / ISO 27001', 'Audit', 'Cloud & IT-Support' );
+		? array( 'General enquiry', 'Penetration test', 'SIEM / SOC', 'Threat intelligence', 'ISMS / ISO 27001', 'NIS2', 'Audit', 'Cloud & IT support' )
+		: array( 'Allgemeine Anfrage', 'Penetrationstest', 'SIEM / SOC', 'Threat Intelligence', 'ISMS / ISO 27001', 'NIS2-Beratung', 'Audit', 'Cloud & IT-Support' );
 	?>
 	<form class="form" id="kontakt-form" method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
 		<?php if ( isset( $messages[ $status ] ) ) : ?>

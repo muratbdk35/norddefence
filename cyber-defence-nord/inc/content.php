@@ -69,6 +69,14 @@ function cdn_services_de() {
 			'points' => array( 'Gap-Analyse und Aufbau eines ISMS nach ISO 27001', 'Risikomanagement nach ISO 31000', 'Richtlinien, Prozesse und Schulungen', 'Vorbereitung auf Zertifizierungsaudits' ),
 		),
 		array(
+			'id'     => 'nis2',
+			'icon'   => 'shield',
+			'title'  => 'NIS2-Beratung',
+			'short'  => 'Wir prüfen, ob Ihr Unternehmen unter die NIS2-Richtlinie fällt, und begleiten Sie bei der pragmatischen Umsetzung der Anforderungen.',
+			'long'   => 'Die NIS2-Richtlinie stellt neue Anforderungen an das Cybersicherheits-Management vieler Unternehmen. Wir klären gemeinsam, ob und wie Sie betroffen sind, zeigen Lücken auf und setzen die nötigen Maßnahmen mit Ihnen um.',
+			'points' => array( 'Betroffenheitsprüfung: Fällt Ihr Unternehmen unter NIS2?', 'Gap-Analyse gegenüber den Anforderungen und priorisierter Maßnahmenplan', 'Risikomanagement-Maßnahmen, Meldeprozesse für Sicherheitsvorfälle und Lieferkettensicherheit', 'Schulung und Unterstützung der Geschäftsleitung sowie Nachweisvorbereitung' ),
+		),
+		array(
 			'id'     => 'audit',
 			'icon'   => 'clipboard',
 			'title'  => 'Interne & Externe Audits',
@@ -142,6 +150,12 @@ function cdn_services_en() {
 			'short'  => 'We support you in building information security management systems (ISMS) and advise on ISO 27001 and ISO 31000 standards.',
 			'long'   => 'We guide you from gap analysis to certification readiness: pragmatic, tailored to your organisation and without unnecessary paperwork.',
 			'points' => array( 'Gap analysis and ISMS implementation according to ISO 27001', 'Risk management according to ISO 31000', 'Policies, processes and training', 'Preparation for certification audits' ),
+		),
+		'nis2'        => array(
+			'title'  => 'NIS2 Consulting',
+			'short'  => 'We assess whether your company falls under the NIS2 directive and support you in implementing the requirements pragmatically.',
+			'long'   => 'The NIS2 directive sets new cybersecurity management requirements for many companies. Together we clarify whether and how you are affected, identify gaps and implement the necessary measures with you.',
+			'points' => array( 'Applicability check: does your company fall under NIS2?', 'Gap analysis against the requirements and a prioritised action plan', 'Risk management measures, incident reporting processes and supply chain security', 'Training and support for management as well as preparing evidence' ),
 		),
 		'audit'       => array(
 			'title'  => 'Internal & External Audits',

@@ -22,7 +22,7 @@
 	<div class="container">
 		<div class="index__head reveal">
 			<p class="label"><?php cdn_e( 'Leistungen', 'Services' ); ?></p>
-			<h2><?php cdn_e( 'Sechs Bausteine. Jeder für sich einsetzbar.', 'Six building blocks. Each one stands on its own.' ); ?></h2>
+			<h2><?php cdn_e( 'Sieben Bausteine. Jeder für sich einsetzbar.', 'Seven building blocks. Each one stands on its own.' ); ?></h2>
 		</div>
 		<ol class="index__list">
 			<?php foreach ( $services as $i => $s ) : ?>
