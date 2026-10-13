@@ -3,7 +3,6 @@
 
 function cdn_contact( $key ) {
 	$defaults = array(
-		'phone'         => '+49 44405254',
 		'email'         => 'info@cyberdefencenord.de',
 		'city'          => 'Hamburg',
 		'address'       => '',

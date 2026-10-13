@@ -76,7 +76,6 @@ function cdn_menu_fallback() {
 add_action( 'customize_register', function ( WP_Customize_Manager $wp_customize ) {
 	$wp_customize->add_section( 'cdn_contact', array( 'title' => 'Kontaktdaten (Cyber Defence Nord)', 'priority' => 30 ) );
 	$fields = array(
-		'phone'     => array( 'Telefon', 'sanitize_text_field' ),
 		'email'     => array( 'E-Mail (Anzeige)', 'sanitize_email' ),
 		'recipient' => array( 'Empfänger für Kontaktformular (leer = Admin-E-Mail)', 'sanitize_email' ),
 		'address'   => array( 'Anschrift (z. B. Straße, PLZ Hamburg)', 'sanitize_text_field' ),
@@ -143,7 +142,6 @@ add_action( 'wp_head', function () {
 			'url'         => home_url( '/' ),
 			'logo'        => get_template_directory_uri() . '/assets/img/logo.png',
 			'email'       => cdn_contact( 'email' ),
-			'telephone'   => cdn_contact( 'phone' ),
 			'areaServed'  => cdn_t( 'Norddeutschland', 'Northern Germany' ),
 			'address'     => array( '@type' => 'PostalAddress', 'addressLocality' => cdn_contact( 'city' ), 'addressCountry' => 'DE' ),
 		);

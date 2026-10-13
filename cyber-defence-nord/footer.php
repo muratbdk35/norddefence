@@ -24,9 +24,6 @@
 				<?php if ( cdn_contact( 'email' ) ) : ?>
 					<li><?php echo cdn_icon( 'mail', 18 ); // phpcs:ignore ?><a href="mailto:<?php echo esc_attr( antispambot( cdn_contact( 'email' ) ) ); ?>"><?php echo esc_html( antispambot( cdn_contact( 'email' ) ) ); ?></a></li>
 				<?php endif; ?>
-				<?php if ( cdn_contact( 'phone' ) ) : ?>
-					<li><?php echo cdn_icon( 'phone', 18 ); // phpcs:ignore ?><a href="tel:<?php echo esc_attr( preg_replace( '/[^\d+]/', '', cdn_contact( 'phone' ) ) ); ?>"><?php echo esc_html( cdn_contact( 'phone' ) ); ?></a></li>
-				<?php endif; ?>
 				<li><?php echo cdn_icon( 'pin', 18 ); // phpcs:ignore ?><span><?php echo esc_html( trim( cdn_contact( 'address' ) . ' ' . cdn_contact( 'city' ) ) ); ?></span></li>
 				<?php if ( cdn_contact( 'linkedin' ) ) : ?>
 					<li><?php echo cdn_icon( 'users', 18 ); // phpcs:ignore ?><a href="<?php echo esc_url( cdn_contact( 'linkedin' ) ); ?>" rel="noopener" target="_blank">LinkedIn</a></li>

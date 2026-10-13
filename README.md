@@ -15,7 +15,7 @@ Ordner: `cyber-defence-nord/`
    - Datenschutz (`/pra/`) → Slug auf `datenschutz` ändern; „Über uns“ (`/a/`) → `ueber-uns`
 5. *Design → Menüs*: Hauptmenü anlegen (Start, Leistungen, Über uns, Kontakt) und „Hauptmenü“ zuweisen.
    Ohne Menü greift ein eingebautes Fallback-Menü.
-6. *Design → Customizer → Kontaktdaten*: Telefon, E-Mail, Anschrift, LinkedIn, Formular-Empfänger.
+6. *Design → Customizer → Kontaktdaten*: E-Mail, Anschrift, LinkedIn, Formular-Empfänger.
 7. „Sample Page“, „Hello world!“ und die Test-Kommentare löschen.
 8. *Einstellungen → Allgemein*: WordPress- und Website-Adresse auf `https://cyberdefencenord.de` setzen (aktuell `http://`).
 
@@ -31,7 +31,7 @@ Ordner: `cyber-defence-nord/`
 ## Hinweise
 - Texte zu Leistungen sind Entwürfe auf Basis der bisherigen Website und müssen fachlich geprüft werden
   (u. a. Aussagen zu „24/7“, Zertifizierungen). Inhalte: `cyber-defence-nord/inc/content.php`.
-- Die Telefonnummer `+49 44405254` wurde unverändert von der alten Seite übernommen – bitte prüfen.
+- Es wird bewusst keine Telefonnummer angezeigt (kein Telefon-Service). Kontakt über E-Mail und Formular.
 - Bilder in der Mediathek: sprechende Dateinamen und Alt-Texte vergeben; Standardseiten-Inhalte bleiben unverändert.
 - Eine Content-Security-Policy ist bewusst nicht gesetzt (hängt von den aktiven Plugins ab); HSTS/CSP ggf. zusätzlich am Server.
 

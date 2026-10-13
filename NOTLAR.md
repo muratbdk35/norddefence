@@ -62,3 +62,6 @@ Tema bunların çoğunu çözüyor; kalanlar WordPress panelinden yapılmalı.
 - Über uns, Impressum, Datenschutz Almanca kalıyor (İngilizce menüde "(DE)" etiketli).
 - Tema ilk etkinleşince kalıcı bağlantılar kendiliğinden yenilenir; `/en/` 404 verirse Ayarlar → Kalıcı bağlantılar → Kaydet.
 - İngilizce metinler benim çevirim; yayından önce bir ana dili konuşan okumalı.
+
+## Telefon
+- Telefon numarası siteden tamamen kaldırıldı (ana sayfa, footer, JSON-LD, Customizer alanı). Kontakt: e-posta + form. Impressum için e-posta + form genellikle yeterli sayılır (telefon zorunlu değil); yine de site sahibine/avukata teyit ettirin.
