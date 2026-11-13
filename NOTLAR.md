@@ -68,3 +68,6 @@ Tema bunların çoğunu çözüyor; kalanlar WordPress panelinden yapılmalı.
 
 ## Footer (dither silüet)
 - 21st "Ridgeline Dither Footer" fikrinden uyarlandı (kod kopyalanmadı): `assets/js/footer-dither.js`, tek canvas, Bayer dither + Elbe sisi, dağlar yerine Hamburg silüeti (Nikolai, Michel, Rathaus, Elbphilharmonie, vinçler). Sadece görünürken çalışır; `prefers-reduced-motion` açıksa tek sabit kare. Dış kaynak yok.
+
+## Hero silüeti (v3)
+- `inc/skyline.php` yeniden çizildi: fünf Hauptkirchen (Petri, Nikolai, Katharinen, Jacobi, Michel), Rathaus, Speicherstadt, Elbphilharmonie, Fernsehturm, Hafenkräne, Dreimast-Bark; üç katmanlı derinlik, Michel'de saat, kulede kırmızı uyarı ışığı. Altında küçük başlık yazısı. SVG, dış kaynak yok.
