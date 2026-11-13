@@ -32,6 +32,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	$dir = get_template_directory();
 	$uri = get_template_directory_uri();
 	wp_enqueue_style( 'cdn-main', $uri . '/assets/css/main.css', array(), filemtime( $dir . '/assets/css/main.css' ) );
+	wp_enqueue_script( 'cdn-footer', $uri . '/assets/js/footer-dither.js', array(), filemtime( $dir . '/assets/js/footer-dither.js' ), array( 'in_footer' => true, 'strategy' => 'defer' ) );
 	wp_enqueue_script( 'cdn-main', $uri . '/assets/js/main.js', array(), filemtime( $dir . '/assets/js/main.js' ), array( 'in_footer' => true, 'strategy' => 'defer' ) );
 } );
 

@@ -42,6 +42,8 @@
 		</div>
 	</div>
 
+	<div class="footer__scene" data-footer-scene aria-hidden="true"><canvas></canvas></div>
+
 	<div class="footer__bar">
 		<div class="container footer__bar-inner">
 			<span>© <?php echo esc_html( wp_date( 'Y' ) ); ?> Cyber Defence Nord. <?php cdn_e( 'Alle Rechte vorbehalten.', 'All rights reserved.' ); ?></span>

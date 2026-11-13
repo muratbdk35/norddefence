@@ -65,3 +65,6 @@ Tema bunların çoğunu çözüyor; kalanlar WordPress panelinden yapılmalı.
 
 ## Telefon
 - Telefon numarası siteden tamamen kaldırıldı (ana sayfa, footer, JSON-LD, Customizer alanı). Kontakt: e-posta + form. Impressum için e-posta + form genellikle yeterli sayılır (telefon zorunlu değil); yine de site sahibine/avukata teyit ettirin.
+
+## Footer (dither silüet)
+- 21st "Ridgeline Dither Footer" fikrinden uyarlandı (kod kopyalanmadı): `assets/js/footer-dither.js`, tek canvas, Bayer dither + Elbe sisi, dağlar yerine Hamburg silüeti (Nikolai, Michel, Rathaus, Elbphilharmonie, vinçler). Sadece görünürken çalışır; `prefers-reduced-motion` açıksa tek sabit kare. Dış kaynak yok.
